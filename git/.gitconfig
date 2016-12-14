@@ -1,0 +1,14 @@
+[user]
+  name = Jean-Yves Beaujean
+  email = jybeaujean@webismymind.be
+
+
+[github]
+  user = jybeaujean 
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore_main
+
+[merge]
+  tool = Kaleidoscope  
