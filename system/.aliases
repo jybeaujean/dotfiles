@@ -11,6 +11,12 @@ alias dh='du -h'
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
 
+# shortcut for dev environment 
+alias my='mysql -u root'
+alias sw='sass --watch --style compressed .'
+alias gco='git checkout'
+
+
 # Shortcuts
 alias dr="cd ~/Dropbox"
 alias dt="cd ~/Desktop"
@@ -24,25 +30,32 @@ alias week='date +%V'
 # show the biggest file of the current directory 
 alias bf="du -s * | sort -nr | head"
 
-alias phplog='tail -f /var/log/apache2/error.log'
-
+# Net utilities
 alias ip="ipconfig getifaddr en1"
-alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+alias poogle='ping google.com'
+alias ipinfo='curl ipinfo.io'
 
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 
-
-alias apalog='tail -f /Applications/MAMP/logs/apache_error.log'
+# remote server
+# alias phplog='tail -f /var/log/apache2/error.log'
+# local ( MAMP )
 alias phplog='tail -f /Applications/MAMP/logs/php_error.log'
 
 
+alias apalog='tail -f /Applications/MAMP/logs/apache_error.log'
 
 # Change to a random mac address
 alias random_mac='sudo ifconfig en0 ether `openssl rand -hex 6 | sed "s/\(..\)/\1:/g; s/.$//"`'
+
 #Restore to original mac address
 # Should it be 10:9a:dd:58:fd:fc ?
 alias restore_mac='sudo ifconfig en0 ether 10:9a:dd:ad:82:5e'
 
 # Flush DNS
 alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+
+# Meteo en ligne de commande 
+alias meteo="curl http://wttr.in/Verviers\?lang\=fr"
 
