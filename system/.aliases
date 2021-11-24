@@ -21,6 +21,7 @@ alias gco='git checkout'
 alias dr="cd ~/Dropbox"
 alias dt="cd ~/Desktop"
 alias wd="cd ~/Documents/wimmdev"
+alias top="python3 ~/Documents/bpytop/bpytop.py"
 
 # Get week number
 alias week='date +%V'
